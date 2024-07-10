@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Icon</title>
+    <style>
+        :root {
+            --color-dark: #000;
+            --m-0-75: 0.75rem;
+            --m-0-5: 0.5rem;
+            --border-radius: 0.25rem;
+        }
+        .mouse {
+            border: 2px solid var(--color-dark);
+            display: block;
+            height: 1.75rem;
+            width: 1.25rem;
+            margin: auto;
+            margin-top: var(--m-0-75);
+            border-radius: var(--border-radius);
+            position: relative;
+        }
+        .mouse .wheel {
+            background-color: var(--color-dark);
+            border-radius: 50%;
+            width: 0.25rem;
+            height: 0.25rem;
+            position: absolute;
+            top: calc(50% - 0.125rem);
+            left: calc(50% - 0.125rem);
+            display: block;
+            animation: ani-mouse 2s linear infinite;
+        }
+        @keyframes ani-mouse {
+            0%, 100% {
+                top: calc(50% - 0.125rem);
+            }
+            50% {
+                top: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mouse">
+        <div class="wheel"></div>
+    </div>
+</body>
+</html>
